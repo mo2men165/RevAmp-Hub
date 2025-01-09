@@ -33,9 +33,9 @@ const Counter = ({ endValue, isCountdown = false }) => {
 const CounterSection = () => {
   const stats = [
     { label: "Happy Customers", endValue: 50 },
-    { label: "Professional Certifications", endValue: 20 },
-    { label: "CRM Migrations", endValue: 100 },
-    { label: "Challenges Unsolved", endValue: 100, isCountdown: true }, // Add `isCountdown`
+    { label: "CRM Migrations", endValue: 20 },
+    { label: "Professional Certifications", endValue: 10 },
+    { label: "Challenges Unsolved", endValue: 50, isCountdown: true }, // Add `isCountdown`
   ];
 
   return (
