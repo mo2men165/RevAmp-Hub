@@ -31,6 +31,9 @@ import MMC from "./MMC.webp";
 import featuredimage from "./engine.webp";
 import blog1 from "./school.webp";
 import blog2 from "./all.webp";
+import casefeature from "./revops.webp";
+import case1 from "./hubspot-workflows.webp";
+import case2 from "./sequence.jpg";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -175,5 +178,8 @@ export {
   MMC,
   featuredimage,
   blog1,
-  blog2
+  blog2,
+  casefeature,
+  case1,
+  case2
 };

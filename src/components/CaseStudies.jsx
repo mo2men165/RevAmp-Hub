@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
 
-import { articles } from './../constants/index';
+import { articles, cases } from './../constants/index';
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import Section from "./Section";
 
 const CaseStudies = () => {
-  const featuredArticle = articles.find((article) => article.featured);
-  const otherArticles = articles.filter((article) => !article.featured);
+  const featuredArticle = cases.find((article) => article.featured);
+  const otherArticles = cases.filter((article) => !article.featured);
 
-  const categories = [...new Set(articles.map((article) => article.category))];
+  const categories = [...new Set(cases.map((article) => article.category))];
 
   return (
     <Section id="blog" className="bg-n-8">
-        <div className="blog-page container flex">
+        <div className="blog-page container flex ">
       <main className="w-3/4 mx-auto p-6">
         <section className="featured-article mb-20">
           <motion.div
-            className="flex justify-center items-center gap-6"
+            className="flex justify-center items-center gap-6 flex-col"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -24,7 +24,7 @@ const CaseStudies = () => {
             <img
               src={featuredArticle?.image}
               alt={featuredArticle?.title}
-              className="w-1/2 rounded-lg shadow-lg"
+              className="w-[85%] rounded-lg shadow-lg"
             />
             <div>
               <h1 className="text-3xl font-bold mb-4">
@@ -54,7 +54,7 @@ const CaseStudies = () => {
             >
               {index % 2 === 0 ? <LeftCurve /> : <RightCurve />}
               <motion.div
-                className="flex items-center gap-6"
+                className="flex items-center flex-col gap-6"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -62,7 +62,7 @@ const CaseStudies = () => {
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-1/3 rounded-lg shadow-lg"
+                  className="w-[65%] rounded-lg shadow-lg"
                 />
                 <div>
                   <h2 className="text-2xl font-bold mb-2">{article.title}</h2>
