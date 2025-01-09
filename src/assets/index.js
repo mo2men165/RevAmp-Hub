@@ -26,6 +26,11 @@ import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
 import HubSpotLogo from "./hubspotlogo.png";
+import provider from "./provider.png";
+import MMC from "./MMC.webp";
+import featuredimage from "./engine.webp";
+import blog1 from "./school.webp";
+import blog2 from "./all.webp";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -43,7 +48,7 @@ import curve2 from "./collaboration/curve-2.svg";
 // import raindrop from "./collaboration/raindrop.png";
 // import slack from "./collaboration/slack.png";
 
-import googleanalytics from "./collaboration/googleanalytics.png";
+import googleanalytics from "./collaboration/looker-icon.svg";
 import hubspot from "./collaboration/hubspot.png";
 import mailchimp from "./collaboration/mailchimp.png";
 import salesforce from "./collaboration/salesforce.png";
@@ -165,5 +170,10 @@ export {
   database,
   shield,
   flowchart,
-  HubSpotLogo
+  HubSpotLogo,
+  provider,
+  MMC,
+  featuredimage,
+  blog1,
+  blog2
 };

@@ -28,8 +28,8 @@ const Pricing = () => {
         </div>
 
         <Heading
-          tag="Get started with RevAmp Hub"
-          title="One-Time Fee, Endless Benefits"
+          tag="Start your journey with us"
+          title="Get started with RevAmp Hub"
         />
 
         <div className="relative">
@@ -41,9 +41,9 @@ const Pricing = () => {
         <div className="flex justify-center mt-10">
           <a
             className="text-xs font-code font-bold tracking-wider uppercase border-b"
-            href="/pricing"
+            href="/contact"
           >
-            See the full details
+            Have a question? Reach out to one of our experts.
           </a>
         </div>
       </div>

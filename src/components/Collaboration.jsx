@@ -4,11 +4,12 @@ import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import { revamp } from "../assets";
+import { motion } from 'framer-motion';
 
 
 const Collaboration = () => {
   return (
-    <Section crosses>
+    <Section crosses crossesOffset>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
@@ -29,7 +30,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button href={'/contact'} >Try it now</Button>
+          <Button href={'/about'} >Learn more</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
@@ -39,26 +40,41 @@ const Collaboration = () => {
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
-              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+              <div className="w-[60rem] aspect-square m-auto p-[.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                  <img
-                    src={revamp}
-                    width={60}
-                    height={60}
-                    alt="RevAmp Hub"
-                  />
+                  <h2 className="revamp aldrich text-[26px]">RevAmp</h2>
+                  <h2 className="hub aldrich text-[26px]">Hub</h2>
                 </div>
               </div>
             </div>
 
-            <ul>
+            <motion.ul
+            className="absolute top-0 left-1/2 h-[100%]"
+            initial={{ rotate: 0 }}  // Start each item at a different angle
+            animate={{
+              rotate: 360,  // All items will complete a full rotation
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 15, // Controls the speed of the circular motion
+              ease: "linear",
+            }}
+                    
+            >
               {collabApps.map((app, index) => (
-                <li
-                  key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
-                    index * 45
-                  }`}
-                >
+                <motion.li
+                key={app.id}
+                className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom`}
+                initial={{ rotate: index * 45 }}  // Start each item at a different angle
+                // animate={{
+                //   rotate: 360,  // All items will complete a full rotation
+                // }}
+                // transition={{
+                //   repeat: Infinity,
+                //   duration: 10 - index, // Controls the speed of the circular motion
+                //   ease: "linear",
+                // }}
+              >
                   <div
                     className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
                       index * 45
@@ -72,13 +88,14 @@ const Collaboration = () => {
                       src={app.icon}
                     />
                   </div>
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
 
             <LeftCurve />
             <RightCurve />
           </div>
+          
         </div>
       </div>
     </Section>

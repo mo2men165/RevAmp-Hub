@@ -26,6 +26,97 @@
     @apply font-sans bg-n-8 text-n-1 text-base;
   }
 }
+/* Active link styles */
+.active {
+  color: #ffffff; /* Makes text white */
+  position: relative; /* Required for positioning the underline */
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Align underline closely to the text */
+  width: 0;
+  height: 2px;
+  background-color: #ffffff; /* White underline */
+  transition: width 0.3s ease-in-out; /* Smooth growing effect */
+}
+
+.active:hover::after,
+.active::after {
+  width: 100%; /* Expands underline when active or hovered */
+}
+
+/* Non-active link underline on hover */
+.navlinks a {
+  position: relative; 
+  text-decoration: none; 
+}
+
+.navlinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Align underline closely to the text */
+  width: 0;
+  height: 2px;
+  background-color: #ffffff; /* White underline */
+  transition: width 0.3s ease-in-out; /* Smooth growing effect */
+}
+
+.navlinks a.active::after{
+  width: 100%;
+}
+
+.navlinks a.links:hover {
+  color: #ffffff;
+}
+
+.navlinks a:hover::after {
+  width: 100%; /* Expands underline smoothly on hover */
+}
+
+/* Gradient for RevAmp text (light purple gradient) */
+.revamp {
+  background: linear-gradient(135deg, #D580FF, #A78BFA, #B392FF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-gradient-animation 5s ease infinite;
+}
+
+/* Gradient for Hub text (light orange gradient) */
+.hub {
+  background: linear-gradient(135deg, #FFC499, #FF9472, #FF6E40);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-gradient-animation 5s ease infinite;
+}
+
+/* Shared animation */
+@keyframes text-gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.group:hover {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.group:hover .hover\:opacity-10 {
+  opacity: 1;
+}
+
+
 
 .rotate-45 {
   @apply rotate-[45deg]
@@ -90,3 +181,37 @@
 .-rotate-360 {
   @apply rotate-[-360deg]
 }
+
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.accordion-body {
+  margin-top: 10px;
+  font-size: 16px;
+}
+

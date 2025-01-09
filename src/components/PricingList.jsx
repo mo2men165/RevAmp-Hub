@@ -30,6 +30,7 @@ const PricingList = () => {
           <Button
             className="w-full mb-6"
             white={!!item.price}
+            href={`/contact`}
           >
             {item.price ? "Get started" : "Contact us"}
           </Button>

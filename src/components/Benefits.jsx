@@ -5,8 +5,12 @@ import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 import Button from "./Button";
 import { services } from './../constants/index';
-
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation, Mousewheel, Keyboard  } from 'swiper/modules';
 
 const Benefits = () => {
 
@@ -19,9 +23,32 @@ const Benefits = () => {
         />
 
         <div className="flex flex-wrap gap-10 mb-10">
-          {benefits.map((item) => (
-            <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+        <Swiper
+        cssMode={true}
+        navigation={true}
+        pagination={true}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        className="mySwiper"
+        loop={true}
+      breakpoints={{
+        // When the screen width is >= 1024px (large screens)
+        1024: {
+          slidesPerView: 2, // Show 2 slides
+          spaceBetween: 30, // Space between slides
+        },
+        // When the screen width is < 1024px
+        0: {
+          slidesPerView: 1, // Show 1 slide
+          spaceBetween: 20, // Space between slides
+        },
+      }}
+      >
+            {benefits.map((item) => (
+            <SwiperSlide className="flex cursor-pointer justify-center items-center w-[40%] ">
+              <div
+              className="block relative p-0.5 bg-no-repeat overflow-hidden bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
@@ -65,10 +92,13 @@ const Benefits = () => {
 
               <ClipPath />
             </div>
+            </SwiperSlide>
           ))}
+            </Swiper>
         </div>
       </div>
     </Section>
+    
   );
 };
 

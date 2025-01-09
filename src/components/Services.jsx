@@ -10,6 +10,7 @@ import {
 } from "./design/Services";
 
 import Generating from "./Generating";
+import { motion } from 'framer-motion';
 
 const Services = () => {
   return (
@@ -21,8 +22,17 @@ const Services = () => {
         />
 
         <div className="relative">
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
+          <motion.div  
+          className="relative z-1 flex items-center h-[30rem] mb-5 p-2 border border-n-1/10 rounded-3xl overflow-hidden "
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0, transition: { duration: 1.6 } },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="absolute top-0 left-0 w-[50%] h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
                 className="w-full h-full object-cover md:object-right"
                 width={800}
@@ -32,9 +42,9 @@ const Services = () => {
               />
             </div>
 
-            <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Complex Workflow Management</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
+            <div className="relative z-1 max-w-[17rem] ml-auto lg:mr-10">
+              <h4 className="text-[28px] mb-2">Complex Workflow Management</h4>
+              <p className="body-2 mb-[1rem] text-n-3">
               RevAmp Hub specializes in optimizing complex workflows for smoother business operations.
               </p>
               <ul className="body-2">
@@ -50,10 +60,18 @@ const Services = () => {
               </ul>
             </div>
 
-          </div>
+          </motion.div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
+            <motion.div 
+                      variants={{
+                        hidden: { opacity: 0, y: 100 },
+                        visible: { opacity: 1, y: 0, transition: { duration: 1.6 } },
+                      }}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+            className="relative min-h-[30rem] border border-n-1/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
                 <img
                   src={service2}
@@ -72,9 +90,17 @@ const Services = () => {
               </div>
 
               <PhotoChatMessage />
-            </div>
+            </motion.div>
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <motion.div 
+                      variants={{
+                        hidden: { opacity: 0, y: 100 },
+                        visible: { opacity: 1, y: 0, transition: { duration: 1.6 } },
+                      }}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+            className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[3rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">Data Scrubbing</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
@@ -114,9 +140,8 @@ const Services = () => {
                 />
 
                 <VideoChatMessage />
-                {/* <VideoBar /> */}
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <Gradient />

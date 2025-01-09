@@ -7,6 +7,12 @@ import ServicesPage from "./components/ServicesPage";
 import PricingPage from "./components/PricingPage";
 import ContactPage from "./components/ContactPage";
 import Footer from './components/Footer';
+import Pricing from "./components/Pricing";
+import Blog from './components/Blog';
+import FAQs from "./components/FAQs";
+import CaseStudies from "./components/CaseStudies";
+import Playbook from "./components/Playbook";
+import ArticlePage from "./components/ArticlePage";
 
 
 const App = () => {
@@ -17,12 +23,19 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/playbooks" element={<Playbook />} />
+        <Route path="/article/:id" element={<ArticlePage />} />
+
       </Routes>
       <Footer />
       <ButtonGradient />
     </div>
+    
   );
 };
 
