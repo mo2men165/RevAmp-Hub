@@ -144,7 +144,7 @@ const Flywheel = () => {
           })}
         </svg>
 
-        <div className="lg:w-1/2 flex justify-center items-center mt-8 lg:mt-0">
+        <div className="lg:w-1/2 flex justify-center items-center mt-8 lg:mt-0 container">
           <div className="max-w-md text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 aldrich">{selectedService.title}</h2>
             <p className="text-lg text-gray-300 mb-6">{selectedService.text}</p>
