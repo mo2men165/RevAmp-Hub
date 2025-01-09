@@ -215,3 +215,9 @@
   font-size: 16px;
 }
 
+@media (max-width: 1024px) {
+  .navlinks:hover {
+    background: none;
+    cursor: pointer;
+  }
+}

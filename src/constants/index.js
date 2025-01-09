@@ -62,7 +62,6 @@ export const navigation = [
   {
     id: "2",
     title: "Resources",
-    url: "/resources",
     subMenu: [
       {
         id: "2-1",
