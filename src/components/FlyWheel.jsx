@@ -67,7 +67,7 @@ const Flywheel = () => {
         : screen.width > 768 
           ? center * 1.5 
           : center * 1.2
-  }  height={center * 2} className="flex-shrink-0" viewBox={`0 0 ${center * 2} ${center * 2}`}>
+  }  height={center * 2} className="flex-shrink-0 justify-center items-center" viewBox={`0 0 ${center * 2} ${center * 2}`}>
           {sections.map((section, index) => {
             const startAngle = index * anglePerSection;
             const endAngle = (index + 1) * anglePerSection;
