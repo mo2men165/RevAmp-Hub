@@ -36,11 +36,6 @@ const Footer = () => {
                   Pricing
                 </a>
               </li>
-              <li>
-                <a href="/resources" className="hover:underline text-n-4">
-                  Resources
-                </a>
-              </li>
             </ul>
           </div>
           <div>

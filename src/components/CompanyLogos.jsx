@@ -3,7 +3,7 @@ import { companyLogos } from "../constants";
 const CompanyLogos = ({ className }) => {
   return (
     <div className={className}>
-      <h2 className=" text-[38px] text-n-4 mb-6 text-center aldrich ">
+      <h2 className=" text-[38px] leading-7 text-n-4 mb-6 text-center aldrich ">
       We partnered with..
       </h2>
       <ul className="flex">

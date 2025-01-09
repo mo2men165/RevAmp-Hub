@@ -54,7 +54,7 @@ const Header = () => {
           <a className="block xl:mr-4 my-4" href="/">
             {/* <img src={revamp} width={90} height={10} alt="RevAmp" /> */}
           </a>
-          <h1 className="text-[30px] revamp aldrich">
+          <h1 className="text-[30px] revamp cursor-pointer aldrich" onClick={() => window.location = "/"}>
             RevAmp <span className="text-[30px] hub aldrich">Hub</span>
           </h1>
         </div>

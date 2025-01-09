@@ -376,7 +376,7 @@ export const services = [
     text: "RevAmp Hub’s Effective Sequence Design service helps optimize your engagement strategies. We craft personalized communication sequences using HubSpot, timed for maximum impact and aligned with your customer journeys. With data-driven insights, we continuously refine sequences to boost conversions and elevate your marketing and sales efforts. Let us help you drive success with effective, tailored sequences.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
-    // imageUrl: benefitImage2,
+    imageUrl: benefitImage2,
   },
   {
     id: "3",

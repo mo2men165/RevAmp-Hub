@@ -58,8 +58,16 @@ const Flywheel = () => {
     <Section id="flywheel" className="relative" crosses crossesOffset>
       <div className="relative z-2 text-center" id="flywheel">
       <Heading className="md:max-w-md lg:max-w-2xl mb-20" title="Our Services" />
-      <div className="flex flex-col md:flex-row justify-between items-center h-auto w-full">
-        <svg width={center * 2} height={center * 2} className="flex-shrink-0" viewBox={`0 0 ${center * 2} ${center * 2}`}>
+      <div className="flex flex-col xl:flex-row justify-between items-center h-auto w-full">
+        <svg width={
+    screen.width > 1400 
+      ? center * 2 
+      : screen.width > 1200 
+        ? center * 1.8 
+        : screen.width > 768 
+          ? center * 1.5 
+          : center * 1.2
+  }  height={center * 2} className="flex-shrink-0" viewBox={`0 0 ${center * 2} ${center * 2}`}>
           {sections.map((section, index) => {
             const startAngle = index * anglePerSection;
             const endAngle = (index + 1) * anglePerSection;
@@ -124,6 +132,7 @@ const Flywheel = () => {
                 fontWeight="bold"
                 style={{ wordWrap: "break-word", width: "80px" }}
                 className="aldrich"
+                onClick={() => handleWedgeClick(index)}
               >
                 {section.title.split(" ").map((word, i) => (
                   <tspan key={i} x={labelPos.x} dy={i === 0 ? 0 : 15}>
