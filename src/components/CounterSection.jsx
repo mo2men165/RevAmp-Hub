@@ -41,20 +41,7 @@ const CounterSection = () => {
   return (
     <div className="py-16">
       <div className="container mx-auto px-6 text-center">
-        <div className="mb-12">
-          <img
-            src={provider}
-            alt="HubSpot Elite Badge"
-            className="mx-auto w-[25%] sm:w-[45%] xs:w-[55%]"
-          />
-          <Button
-            className={`my-6`}
-            href={`https://ecosystem.hubspot.com/marketplace/solutions/revamphub`}
-          >
-            Visit our Ecosystem
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -67,6 +54,20 @@ const CounterSection = () => {
             </div>
           ))}
         </div>
+        <div className="">
+          <img
+            src={provider}
+            alt="HubSpot Elite Badge"
+            className="mx-auto w-[25%] sm:w-[45%] xs:w-[55%]"
+          />
+          <Button
+            className={`my-6`}
+            href={`https://ecosystem.hubspot.com/marketplace/solutions/revamphub`}
+          >
+            Visit our Ecosystem
+          </Button>
+        </div>
+        
       </div>
     </div>
   );

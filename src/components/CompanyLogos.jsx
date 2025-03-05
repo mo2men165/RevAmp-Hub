@@ -4,7 +4,7 @@ const CompanyLogos = ({ className }) => {
   return (
     <div className={className}>
       <h2 className=" text-[38px] leading-10 text-n-4 mb-6 text-center aldrich ">
-      We partnered with..
+      Our Partners
       </h2>
       <ul className="flex">
         {companyLogos.map((logo, index) => (

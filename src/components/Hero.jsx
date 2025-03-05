@@ -66,7 +66,7 @@ const Hero = () => {
         </div>
 
       </div>
-      <CompanyLogos className="relative z-10 mt-20 flex-col flex justify-between container items-center" />
+      <CompanyLogos className="relative z-10 mt-20 flex justify-center gap-20 container items-center" />
 
       <BottomLine />
     </Section>

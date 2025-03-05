@@ -42,8 +42,8 @@ const Collaboration = () => {
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <div className="w-[60rem] aspect-square m-auto p-[.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                  <h2 className="revamp aldrich text-[26px]">RevAmp</h2>
-                  <h2 className="hub aldrich text-[26px]">Hub</h2>
+                  <h2 className="revamp aldrich text-[26px]">RevAmp&nbsp;</h2>
+                  <span className="hub aldrich text-[26px]">Hub</span>
                 </div>
               </div>
             </div>

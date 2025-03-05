@@ -22,15 +22,15 @@ const AboutPage = () => {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 p-8">
-              <h2 className="text-3xl text-n-1 font-semibold mb-4">Our Mission</h2>
+              <h2 className="text-3xl text-n-1 font-semibold mb-4">RevAmp Hub: Your HubSpot Powerhouse</h2>
               <p className="text-lg text-n-3 mb-6">
-                RevAmp Hub is all about transforming HubSpot into a powerhouse for sales, marketing, and customer success teams. We are a team of HubSpot enthusiasts who offer a solution to every problem and insight into every opportunity.
+              We believe HubSpot is more than just software; it's a system for orchestrated growth. We're HubSpot experts who help you design and implement a seamless solution for sales, marketing, and customer success.
               </p>
               <p className="text-lg text-n-3 mb-6">
-                HubSpot is not just about automation, it's the overall design and how the tiny details are synced in harmony. That's where we shine most, by implementing and strictly following a precise and visually clear process map.
+              We go beyond basic implementation. We focus on clear processes and meticulous execution to ensure your HubSpot investment delivers maximum ROI.
               </p>
               <p className="text-lg text-n-3 mb-6">
-                With quality right before our eyes in every detail, we have a dedicated team that does only that, with the sole objective of making sure that every project and every task is tested and does not overlap with other pieces.
+              Our team is dedicated to your success. We rigorously test every step to guarantee a smooth launch and ongoing support.
               </p>
             </div>
             <div className="lg:w-1/2 flex justify-center">
