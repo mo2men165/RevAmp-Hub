@@ -4,6 +4,10 @@ import { socials } from "../constants";
 import { provider, revamp } from "../assets";
 
 const Footer = () => {
+  const handleClick = () => {
+    window.open("https://ecosystem.hubspot.com/marketplace/solutions/revamphub", "_blank");
+  };
+
   return (
     <Section crosses className="!px-0 !py-16  text-white">
       <div className="container grid lg:grid-cols-2  gap-10">
@@ -11,9 +15,7 @@ const Footer = () => {
         <div>
         <img src={revamp} width={90} height={90} alt="RevAmp" />
           <div className="mt-5">
-            <a target="_blank" href="https://ecosystem.hubspot.com/marketplace/solutions/revamphub">
-            <img src={provider} alt="HubSpot Partner Badge" className="w-[25%]" />
-            </a>
+            <img src={provider} alt="HubSpot Partner Badge" className="w-[25%] cursor-pointer" onClick={handleClick}  />
           </div>
         </div>
 
