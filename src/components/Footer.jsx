@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "./Section";
 import { socials } from "../constants";
-import { provider } from "../assets";
+import { provider, revamp } from "../assets";
 
 const Footer = () => {
   return (
@@ -9,10 +9,7 @@ const Footer = () => {
       <div className="container grid lg:grid-cols-2  gap-10">
         {/* Left Side */}
         <div>
-          <h1 className="text-4xl font-bold">
-            <span className="revamp aldrich">RevAmp</span>{" "}
-            <span className="hub aldrich">Hub</span>
-          </h1>
+        <img src={revamp} width={90} height={90} alt="RevAmp" />
           <div className="mt-5">
             <a target="_blank" href="https://ecosystem.hubspot.com/marketplace/solutions/revamphub">
             <img src={provider} alt="HubSpot Partner Badge" className="w-[25%]" />
